@@ -20,10 +20,6 @@
 /* Begin PBXFileReference section */
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08FB77B2FE8417CDC02AAC07 /* mach_inject_bundle_stub.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = mach_inject_bundle_stub.c; sourceTree = "<group>"; };
-		23A925321415A34F00EE4B17 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = ../../../../../../System/Library/Frameworks/Cocoa.framework; sourceTree = "<group>"; };
-		23A925341415A35900EE4B17 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = ../../../../../../System/Library/Frameworks/CoreServices.framework; sourceTree = "<group>"; };
-		23A925361415A36B00EE4B17 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = ../../../../../../System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<group>"; };
-		23A925381415A37800EE4B17 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = ../../../../../../System/Library/Frameworks/Cocoa.framework; sourceTree = "<group>"; };
 		32BAE0B30371A71500C91783 /* mach_inject_bundle_stub_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mach_inject_bundle_stub_Prefix.pch; sourceTree = "<group>"; };
 		79ACC4F307FD370C00D4147B /* load_bundle.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = load_bundle.c; sourceTree = "<group>"; };
 		79ACC4F407FD370C00D4147B /* load_bundle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = load_bundle.h; sourceTree = "<group>"; };
@@ -49,10 +45,6 @@
 		089C166AFE841209C02AAC07 /* mach_inject_bundle_stub */ = {
 			isa = PBXGroup;
 			children = (
-				23A925381415A37800EE4B17 /* Cocoa.framework */,
-				23A925361415A36B00EE4B17 /* CoreFoundation.framework */,
-				23A925341415A35900EE4B17 /* CoreServices.framework */,
-				23A925321415A34F00EE4B17 /* Cocoa.framework */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
@@ -205,7 +197,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		33B2AC4B092854FB004B1632 /* Development */ = {
+		33B2AC4B092854FB004B1632 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -240,9 +232,9 @@
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		33B2AC4C092854FB004B1632 /* Deployment */ = {
+		33B2AC4C092854FB004B1632 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -274,57 +266,19 @@
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		33B2AC4D092854FB004B1632 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_ENABLE_TRIGRAPHS = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = mach_inject_bundle_stub_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
-				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
-				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = Bundle;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = mach_inject_bundle_stub;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Default;
-		};
-		33B2AC4F092854FB004B1632 /* Development */ = {
+		33B2AC4F092854FB004B1632 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
-			name = Development;
+			name = Debug;
 		};
-		33B2AC50092854FB004B1632 /* Deployment */ = {
+		33B2AC50092854FB004B1632 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
-			name = Deployment;
-		};
-		33B2AC51092854FB004B1632 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -332,22 +286,20 @@
 		33B2AC4A092854FB004B1632 /* Build configuration list for PBXNativeTarget "mach_inject_bundle_stub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33B2AC4B092854FB004B1632 /* Development */,
-				33B2AC4C092854FB004B1632 /* Deployment */,
-				33B2AC4D092854FB004B1632 /* Default */,
+				33B2AC4B092854FB004B1632 /* Debug */,
+				33B2AC4C092854FB004B1632 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 		33B2AC4E092854FB004B1632 /* Build configuration list for PBXProject "mach_inject_bundle_stub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33B2AC4F092854FB004B1632 /* Development */,
-				33B2AC50092854FB004B1632 /* Deployment */,
-				33B2AC51092854FB004B1632 /* Default */,
+				33B2AC4F092854FB004B1632 /* Debug */,
+				33B2AC50092854FB004B1632 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
